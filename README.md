@@ -4,24 +4,53 @@
 ```c
 Procedure Masak_Indomie():
     // Langkah 1: Siapkan bahan-bahan
-    Buka kemasan indomie
-    Rebus air dalam panci
+    Buka_kemasan_indomie()
+    Siapkan panci dan air
+    Panaskan air hingga mendidih
     
-    // Langkah 2: Masak Indomie
-    Tambahkan mi Indomie ke dalam air mendidih
-    Masak mi selama 2-3 menit hingga matang
+    // Langkah 2: Tambahkan mi Indomie ke dalam air mendidih
+    Tambahkan_mi_Indomie_ke_Air_Mendidih()
     
-    // Langkah 3: Tiriskan dan tambahkan bumbu
-    Matikan api
-    Tiriskan air dari panci
-    Tambahkan bumbu ke mi Indomie
-    Aduk rata hingga bumbu merata
+    // Langkah 3: Masak mi Indomie hingga matang
+    While Mi_Belum_Matang():
+        Tunggu_1_Menit()
+        Jika Mi_Sudah_Matang() maka
+            Break // Keluar dari loop jika mi sudah matang
+        End If
+    End While
     
-    // Langkah 4: Sajikan
-    Tuang mi Indomie ke dalam mangkuk
-    Sajikan dan nikmati
+    // Langkah 4: Tiriskan air dan tambahkan bumbu
+    Matikan_api()
+    Tiriskan_air_dengan_saringan_atau_hati_hati()
+    Buka_bungkus_bumbu_Indomie()
+    Taburkan_bumbu_ke_mi_Indomie_di_mangkuk()
+    
+    // Langkah 5: Aduk dan sajikan
+    Aduk_mi_dengan_bumbu_hingga_merata()
+    Sajikan_mi_Indomie_dalam_mangkuk_atau_piring()
+    Nikmati_mi_Indomie_selagi_hangat()
     
 End Procedure
+
+Function Mi_Belum_Matang() -> boolean:
+    // Fungsi ini mengembalikan nilai true jika mi Indomie belum matang, false jika sudah matang
+    Jika Waktu_Memasak_Mi < Waktu_Yang_Dibutuhkan_Mi_Matang maka
+        Kembalikan true
+    Else
+        Kembalikan false
+    End If
+
+Procedure Tunggu_1_Menit():
+    // Fungsi untuk menunggu selama 1 menit
+    Tunggu_selama_1_menit()
+
+Procedure Mi_Sudah_Matang() -> boolean:
+    // Fungsi ini mengembalikan nilai true jika mi Indomie sudah matang, false jika belum
+    Jika Waktu_Memasak_Mi >= Waktu_Yang_Dibutuhkan_Mi_Matang maka
+        Kembalikan true
+    Else
+        Kembalikan false
+    End If
 ```
 
 ### Fun Fact
